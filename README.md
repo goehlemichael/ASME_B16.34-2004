@@ -13,8 +13,6 @@
 
     184.2 mm, 7.25 in
     
-## This program is useful for inspectors checking valve conformity during procurement/incoming/receiving inspections. It enables inspectors to quickly check valves nameplates and markings are correct. This program is usefull when there are large variety of valves being inspected for valve management.
-
-    
+## This program is useful for inspectors checking valve conformity during procurement/incoming/receiving inspections. It enables inspectors to quickly check valves nameplates and markings are correct. This program is usefull when there are a large variety of valve sizes being inspected for valve management.
 
 
