@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"> 
+
+<body>
+
+<h2>ASME B16.34-2004</h2>
+<h2>Table A-1, Inside Diameter, d</h2>
+
+<p>Please input Rating and NPS</p>
+
+<!-- ratings input -->
+<input type="text" id="ratingsvalue" list="ratings" placeholder="Class Rating">
+<datalist id="ratings">
+  <option value="150">
+  <option value="300">
+  <option value="600">
+  <option value="900">
+  <option value="1500">
+  <option value="2500">
+</datalist>
+
+<!-- nps input -->
+<input type="text" id="npsvalue" list="nps" placeholder="Nominal Pipe Size (DN)">
+<datalist id="nps">
+<!--  <option value="1/2">
+  <option value="3/4">
+  <option value="1">
+  <option value="1-1/4">
+  <option value="1-1/2">
+  <option value="2">
+  <option value="2-1/2">
+  <option value="3">
+  <option value="4">
+  <option value="5">
+  <option value="6">
+  <option value="8">
+  <option value="10">
+  <option value="12">
+  <option value="14">
+  <option value="16">
+  <option value="18">
+  <option value="20">
+  <option value="22">
+  <option value="24">
+  <option value="26">
+  <option value="28">
+  <option value="30"> -->
+  <option value="DN15">
+  <option value="DN20">
+  <option value="DN25">
+  <option value="DN32">
+  <option value="DN40">
+  <option value="DN50">
+  <option value="DN65">
+  <option value="DN80">
+  <option value="DN100">
+  <option value="DN125">
+  <option value="DN150">
+  <option value="DN200">
+  <option value="DN250">
+  <option value="DN300">
+  <option value="DN350">
+  <option value="DN400">
+  <option value="DN450">
+  <option value="DN500">
+  <option value="DN550">
+  <option value="DN600">
+  <option value="DN650">
+  <option value="DN700">
+  <option value="DN750">
+</datalist>
+
+<!-- on click call submitnumbers function -->
+<button type="button" onclick="submitnumbers()">Submit</button>
+<input type="button" value="Clear" onClick="window.location.reload()">
+<p>Inner diamater =</p>
+<p id="output"></p>
+
+<script>
+
+
+//match input value of nps to array and return index value
+//var npsinches = ["1/2", "3/4", "1", "1-1/4", "1-1/2", "2", "2-1/2", "3", "4", "5", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30"];
+
+//var npsinchesdecimal = ["0.5", "0.75", "1", "1.25", "1.5", "2", "2.5", "3", "4", "5", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30"];
+
+//match input value of nps to array and return index value
+//var npsdn = ["DN15", "DN20", "DN25", "DN32", "DN40", "DN50", "DN65", "DN80", "DN100", "DN125", "DN150", "DN200", "DN250", "DN300", "DN350", "DN400", "DN450", "DN500", "DN550", "DN600", "DN650", "DN700", "DN750"];
+
+//diamater array = diamter [ratings] [nps]
+diameter = new Array (6);
+for (i = 0; i < diameter . length; ++ i)
+    diameter [i] = new Array (6);
+
+//150 class
+diameter [0] [0] = "12.7 mm, 0.50 in";
+diameter [0] [1] = "19.1 mm, 0.75 in";
+diameter [0] [2] = "25.4 mm, 1.00 in";
+diameter [0] [3] = "31.8 mm, 1.25 in";
+diameter [0] [4] = "38.1 mm, 1.50 in";
+diameter [0] [5] = "50.8 mm, 2.00 in";
+diameter [0] [6] = "63.5 mm, 2.50 in";
+diameter [0] [7] = "76.2 mm, 3.00 in";
+diameter [0] [8] = "101.6 mm, 4.00 in";
+diameter [0] [9] = "127.0 mm, 5.00 in";
+diameter [0] [10] = "152.4 mm, 6.00 in";
+diameter [0] [11] = "203.2 mm, 8.00 in";
+diameter [0] [12] = "254.0 mm, 10.00 in";
+diameter [0] [13] = "304.8 mm, 12.00 in";
+diameter [0] [14] = "336.6 mm, 13.25 in";
+diameter [0] [15] = "387.4 mm, 15.25 in";
+diameter [0] [16] = "438.2 mm, 17.25 in";
+diameter [0] [17] = "489.0 mm, 19.25 in";
+diameter [0] [18] = "539.8 mm, 21.25 in";
+diameter [0] [19] = "590.6 mm, 23.25 in";
+diameter [0] [20] = "641.4 mm, 25.25 in";
+diameter [0] [21] = "692.2 mm, 27.25 in";
+diameter [0] [22] = "743.0 mm, 29.25 in";
+//300 class
+diameter [1] [0] = "12.7 mm, 0.50 in";
+diameter [1] [1] = "19.1 mm, 0.75 in";
+diameter [1] [2] = "25.4 mm, 1.00 in";
+diameter [1] [3] = "31.8 mm, 1.25 in";
+diameter [1] [4] = "38.1 mm, 1.50 in";
+diameter [1] [5] = "50.8 mm, 2.00 in";
+diameter [1] [6] = "63.5 mm, 2.50 in";
+diameter [1] [7] = "76.2 mm, 3.00 in";
+diameter [1] [8] = "101.6 mm, 4.00 in";
+diameter [1] [9] = "127.0 mm, 5.00 in";
+diameter [1] [10] = "152.4 mm, 6.00 in";
+diameter [1] [11] = "203.2 mm, 8.00 in";
+diameter [1] [12] = "254.0 mm, 10.00 in";
+diameter [1] [13] = "304.8 mm, 12.00 in";
+diameter [1] [14] = "336.6 mm, 13.25 in";
+diameter [1] [15] = "387.4 mm, 15.25 in";
+diameter [1] [16] = "431.8 mm, 17.00 in";
+diameter [1] [17] = "482.6 mm, 19.00 in";
+diameter [1] [18] = "533.4 mm, 21.00 in";
+diameter [1] [19] = "584.2 mm, 23.00 in";
+diameter [1] [20] = "635.0 mm, 25.00 in";
+diameter [1] [21] = "685.8 mm, 27.00 in";
+diameter [1] [22] = "736.6 mm, 29.00 in";
+//600 class
+diameter [2] [0] = "12.7 mm, 0.50 in";
+diameter [2] [1] = "19.1 mm, 0.75 in";
+diameter [2] [2] = "25.4 mm, 1.00 in";
+diameter [2] [3] = "31.8 mm, 1.25 in";
+diameter [2] [4] = "38.1 mm, 1.50 in";
+diameter [2] [5] = "50.8 mm, 2.00 in";
+diameter [2] [6] = "63.5 mm, 2.50 in";
+diameter [2] [7] = "76.2 mm, 3.00 in";
+diameter [2] [8] = "101.6 mm, 4.00 in";
+diameter [2] [9] = "127.0 mm, 5.00 in";
+diameter [2] [10] = "152.4 mm, 6.00 in";
+diameter [2] [11] = "199.9 mm, 7.87 in";
+diameter [2] [12] = "247.7 mm, 9.75 in";
+diameter [2] [13] = "298.5 mm, 11.75 in";
+diameter [2] [14] = "326.9 mm, 12.87 in";
+diameter [2] [15] = "374.7 mm, 14.75 in";
+diameter [2] [16] = "419.1 mm, 16.50 in";
+diameter [2] [17] = "463.6 mm, 18.25 in";
+diameter [2] [18] = "511.0 mm, 20.12 in";
+diameter [2] [19] = "558.8 mm, 22.00 in";
+diameter [2] [20] = "603.3 mm, 23.75 in";
+diameter [2] [21] = "647.7 mm, 25.50 in";
+diameter [2] [22] = "695.2 mm, 27.37 in";
+//900 class
+diameter [3] [0] = "12.7 mm, 0.50 in";
+diameter [3] [1] = "17.5 mm, 0.69 in";
+diameter [3] [2] = "22.1 mm, 0.87 in";
+diameter [3] [3] = "28.4 mm, 1.12 in";
+diameter [3] [4] = "34.8 mm, 1.37 in";
+diameter [3] [5] = "47.5 mm, 1.87 in";
+diameter [3] [6] = "57.2 mm, 2.25 in";
+diameter [3] [7] = "72.9 mm, 2.87 in";
+diameter [3] [8] = "98.3 mm, 3.87 in";
+diameter [3] [9] = "120.7 mm, 4.75 in";
+diameter [3] [10] = "146.1 mm, 5.75 in";
+diameter [3] [11] = "190.5 mm, 7.50 in";
+diameter [3] [12] = "238.0 mm, 9.37 in";
+diameter [3] [13] = "282.4 mm, 11.12 in";
+diameter [3] [14] = "311.2 mm, 12.25 in";
+diameter [3] [15] = "355.6 mm, 14.00 in";
+diameter [3] [16] = "400.1 mm, 15.75 in";
+diameter [3] [17] = "444.5 mm, 17.50 in";
+diameter [3] [18] = "489.0 mm, 19.25 in";
+diameter [3] [19] = "533.4 mm, 21.00 in";
+diameter [3] [20] = "577.9 mm, 22.75 in";
+diameter [3] [21] = "622.3 mm, 24.50 in";
+diameter [3] [22] = "666.8 mm, 26.25 in";
+//1500 class
+diameter [4] [0] = "12.7 mm, 0.50 in";
+diameter [4] [1] = "17.5 mm, 0.69 in";
+diameter [4] [2] = "22.1 mm, 0.87 in";
+diameter [4] [3] = "28.4 mm, 1.12 in";
+diameter [4] [4] = "34.8 mm, 1.37 in";
+diameter [4] [5] = "47.5 mm, 1.87 in";
+diameter [4] [6] = "57.2 mm, 2.25 in";
+diameter [4] [7] = "69.9 mm, 2.75 in";
+diameter [4] [8] = "91.9 mm, 3.62 in";
+diameter [4] [9] = "111.0 mm, 4.37 in";
+diameter [4] [10] = "136.4 mm, 5.37 in";
+diameter [4] [11] = "177.8 mm, 7.00 in";
+diameter [4] [12] = "222.3 mm, 8.75 in";
+diameter [4] [13] = "263.4 mm, 10.37 in";
+diameter [4] [14] = "288.8 mm, 11.37 in";
+diameter [4] [15] = "330.2 mm, 13.00 in";
+diameter [4] [16] = "371.3 mm, 14.62 in";
+diameter [4] [17] = "415.8 mm, 16.37 in";
+diameter [4] [18] = "457.2 mm, 18.00 in";
+diameter [4] [19] = "498.3 mm, 19.62 in";
+diameter [4] [20] = "539.8 mm, 21.25 in";
+diameter [4] [21] = "584.2 mm, 23.00 in";
+diameter [4] [22] = "625.3 mm, 24.62 in";
+//2500 class
+diameter [5] [0] = "11.2 mm, 0.44 in";
+diameter [5] [1] = "14.2 mm, 0.56 in";
+diameter [5] [2] = "19.1 mm, 0.75 in";
+diameter [5] [3] = "25.4 mm, 1.00 in";
+diameter [5] [4] = "28.4 mm, 1.12 in";
+diameter [5] [5] = "38.1 mm, 1.50 in";
+diameter [5] [6] = "47.5 mm, 1.87 in";
+diameter [5] [7] = "57.2 mm, 2.25 in";
+diameter [5] [8] = "72.9 mm, 2.87 in";
+diameter [5] [9] = "91.9 mm, 3.62 in";
+diameter [5] [10] = "111.0 mm, 4.37 in";
+diameter [5] [11] = "146.1 mm, 5.75 in";
+diameter [5] [12] = "184.2 mm, 7.25 in";
+diameter [5] [13] = "218.9 mm, 8.62 in";
+diameter [5] [14] = "241.3 mm, 9.50 in";
+diameter [5] [15] = "276.1 mm, 10.87 in";
+diameter [5] [16] = "311.2 mm, 12.25 in";
+diameter [5] [17] = "342.9 mm, 13.50 in";
+diameter [5] [18] = "377.7 mm, 14.87 in";
+diameter [5] [19] = "412.8 mm, 16.25 in";
+diameter [5] [20] = "447.5 mm, 17.62 in";
+diameter [5] [21] = "482.6 mm, 19.00 in";
+diameter [5] [22] = "517.4 mm, 20.37 in";
+
+//create table with values
+//function print_array (array) {
+//	document.writeln("<table border>");
+//    	var row;
+//    	for (row = 0; row < array . length; ++ row)
+//    	{
+//    		document.writeln("<tr>");
+//    		var col;
+//    		for (col = 0; col < array[row].length; ++ col)
+//    			document.writeln("<td>"+array[row][col]+"</td>");
+//    		document.writeln("</tr>");
+//    	}
+//    	document.writeln("</table>");
+//}
+
+// select object from table
+function submitnumbers() {
+
+        var indices = [];
+        //match input value of rating to array and return index value
+        var ratings = ["150", "300", "600", "900", "1500", "2500"];
+        var inputx = document.getElementById("ratingsvalue").value;
+        var r = ratings.indexOf(inputx);
+        while (r != -1) {
+          indices.push(r);
+          r = ratings.indexOf(inputx, r + 1);
+        }
+
+        var indices1 = [];
+        //match input value of nominal pipe size to array and return index value
+        var npsdn = ["DN15", "DN20", "DN25", "DN32", "DN40", "DN50", "DN65", "DN80", "DN100", "DN125", "DN150", "DN200", "DN250", "DN300", "DN350", "DN400", "DN450", "DN500", "DN550", "DN600", "DN650", "DN700", "DN750"];
+        var inputy = document.getElementById("npsvalue").value;
+        var s = npsdn.indexOf(inputy);
+        while (s != -1) {
+          indices1.push(s);
+          s = npsdn.indexOf(inputy, s + 1);
+        }
+returned = diameter[indices][indices1];
+console.log(indices);
+console.log(indices1);
+console.log(returned);
+document.getElementById("output").innerHTML = returned;
+}
+
+//print_array (diameter);
+</script>
+
+</body>
+</html> 
+
+
