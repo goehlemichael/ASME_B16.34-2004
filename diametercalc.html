@@ -56,6 +56,7 @@
 
 <p>Please input Rating and NPS ( inches )</p>
 
+<!-- ratings input -->
 <input type="text" id="ratingsvalue2" list="ratings" placeholder="Class Rating">
 <datalist id="ratings">
   <option value="150">
@@ -63,12 +64,11 @@
   <option value="600">
   <option value="900">
   <option value="1500">
-  <option va
-
-lue="2500">
+  <option value="2500">
 </datalist>
+
 <!-- nps input -->
-<input type="text" id="npsvalue2" list="npsinch" placeholder="Nominal Pipe Size (DN)">
+<input type="text" id="npsvalue2" list="npsinch" placeholder="Nominal Pipe Size (inches)">
 <datalist id="npsinch">
   <option value="1/2">
   <option value="3/4">
@@ -105,7 +105,7 @@ lue="2500">
   <option value="50">
 </datalist>
 
-<!-- on click call submitnumbers function -->
+<!-- on click call submitnumbers2 function -->
 <button type="button" onclick="submitnumbers2()">Submit</button>
 <input type="button" value="Clear" onClick="window.location.reload()">
 <p>Inner diamater =</p>
