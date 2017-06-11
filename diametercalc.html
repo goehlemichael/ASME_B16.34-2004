@@ -113,21 +113,10 @@ lue="2500">
 
 
 <script>
-
-
-//match input value of nps to array and return index value
-//var npsinches = ["1/2", "3/4", "1", "1-1/4", "1-1/2", "2", "2-1/2", "3", "4", "5", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30"];
-
-//var npsinchesdecimal = ["0.5", "0.75", "1", "1.25", "1.5", "2", "2.5", "3", "4", "5", "6", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30"];
-
-//match input value of nps to array and return index value
-//var npsdn = ["DN15", "DN20", "DN25", "DN32", "DN40", "DN50", "DN65", "DN80", "DN100", "DN125", "DN150", "DN200", "DN250", "DN300", "DN350", "DN400", "DN450", "DN500", "DN550", "DN600", "DN650", "DN700", "DN750"];
-
 //diamater array = diamter [ratings] [nps]
 diameter = new Array (6);
 for (i = 0; i < diameter . length; ++ i)
     diameter [i] = new Array (6);
-
 //150 class
 diameter [0] [0] = "12.7 mm, 0.50 in";
 diameter [0] [1] = "19.1 mm, 0.75 in";
@@ -348,7 +337,7 @@ diameter [5] [32] = "Not Defined";
 //    	document.writeln("</table>");
 //}
 
-// select object from table
+// select object from table using DN units
 function submitnumbers() {
 
         var indices = [];
@@ -376,7 +365,7 @@ console.log(indices1);
 console.log(returned);
 document.getElementById("output").innerHTML = returned;
 }
-
+// select object from table using inches
 function submitnumbers2() {
 
         var indices = [];
