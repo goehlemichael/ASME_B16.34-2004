@@ -15,4 +15,8 @@
     
 ## This program is useful for inspectors checking valve conformity during procurement/incoming/receiving inspections. It enables inspectors to quickly check valves nameplates and markings are correct. This program is usefull when there are a large variety of valve sizes being inspected for valve management.
 
+### To do:
+
+- update to ASME B16.34-2013 table A-1 page. 183
+
 
