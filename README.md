@@ -32,10 +32,6 @@
 
     Standard class 73.3 bar, Special class 100.6 bar
     
-### To do:
-
-1. finish value tables
-    
      
 
 
