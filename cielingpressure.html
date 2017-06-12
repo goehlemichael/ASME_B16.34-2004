@@ -165,7 +165,7 @@ ceiling [1] [12] = "Standard class 33.7 bar, Special class 47.3 bar";
 ceiling [1] [13] = "Standard class 31.7 bar, Special class 42.8 bar";
 ceiling [1] [14] = "Standard class 28.2 bar, Special class 35.6 bar";
 ceiling [1] [15] = "Standard class 25.8 bar, Special class 30.5 bar";
-ceiling [1] [16] = "Standard class 25.2 bar, Special class 2-9.0 bar";
+ceiling [1] [16] = "Standard class 25.2 bar, Special class 29.0 bar";
 ceiling [1] [17] = "Standard class 25.0 bar, Special class 29.0 bar";
 ceiling [1] [18] = "Standard class 24.0 bar, Special class 28.6 bar";
 ceiling [1] [19] = "Standard class 21.6 bar, Special class 26.9 bar";
@@ -329,7 +329,7 @@ ceiling [6] [26] = "Standard class 68.4 bar, Special class 85.6 bar";
 ceiling [6] [27] = "Standard class 52.6 bar, Special class 65.6 bar";
 ceiling [6] [28] = "Standard class 42.7 bar, Special class 53.1 bar";
 
-//ceiling pressure array = ceilinge in bar [ratings] [temperature Celsius]
+//ceiling pressure array = ceiling in bar [ratings] [temperature Celsius]
 ceiling2 = new Array (7);
 for (i = 0; i < ceiling2 . length; ++ i)
     ceiling2 [i] = new Array (7);
@@ -567,7 +567,7 @@ function submitnumbers2() {
         }
 
         var indices1 = [];
-        //match input value of nominal pipe size to array and return index value
+        //match input value of temperature to array and return index value
         var temps2 = ["-20 to 100", "200", "300", "400", "500", "600", "650", "700", "750", "800", "850", "900", "950", "1,000", "1,050", "1,100", "1,150", "1,200", "1,250", "1,300", "1,350", "1,400", "1,450", "1,500"];
         var inputy = document.getElementById("tempsvalue2").value;
         var s = temps2.indexOf(inputy);
