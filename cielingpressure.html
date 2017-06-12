@@ -78,7 +78,7 @@
 </datalist>
 
 <!-- temperature input -->
-<input type="text" id="tempsvalue2" list="temp2" placeholder="Temperature (F)">
+<input type="text" id="tempsvalue2" list="temp2" placeholder="Temperature (°F)">
 <datalist id="temp2">
   <option value="-20 to 100">
   <option value="200">
@@ -329,7 +329,7 @@ ceiling [6] [26] = "Standard class 68.4 bar, Special class 85.6 bar";
 ceiling [6] [27] = "Standard class 52.6 bar, Special class 65.6 bar";
 ceiling [6] [28] = "Standard class 42.7 bar, Special class 53.1 bar";
 
-//ceiling pressure array = ceiling in bar [ratings] [temperature Celsius]
+//ceiling pressure array = ceiling in psig [ratings] [temperature fahrenheit]
 ceiling2 = new Array (7);
 for (i = 0; i < ceiling2 . length; ++ i)
     ceiling2 [i] = new Array (7);
